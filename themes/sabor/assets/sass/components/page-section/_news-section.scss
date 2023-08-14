@@ -1,0 +1,170 @@
+.news-section {
+   margin: 70px 0px 107px;
+
+   @media screen and (max-width: $media-small) {
+      margin: 35px 0px 47px;
+   }
+
+   .container {
+      @media screen and (max-width:$media-large) {
+         padding-right: 0px;
+      }
+
+      h5 {
+         font-family: 'Source Serif Pro';
+         font-style: normal;
+         font-weight: 600;
+         font-size: 42px;
+         line-height: 110%;
+         color: #09090B;
+         padding-bottom: 26px;
+         position: relative;
+         border-bottom: 4px solid #09090B;
+
+         @media screen and (max-width:$media-small) {
+            &::before {
+               content: '';
+               position: absolute;
+               bottom: 0px;
+               left: 0px;
+               width: calc(100% - 15px);
+               border-bottom: 4px solid #09090B;
+            }
+         }
+
+         @media screen and (max-width: $media-small) {
+            font-size: 24px;
+            padding-bottom: 16px;
+            border-bottom: 0px;
+         }
+      }
+
+      .cards {
+         display: flex;
+         flex-wrap: wrap;
+         margin-top: 32px;
+         justify-content: space-between;
+         gap: 23px;
+
+         @media screen and (max-width: $media-small) {
+            margin-top: 24px;
+         }
+
+         .slick-list {
+            padding-left: 0px !important;
+         }
+
+         .card {
+            width: calc(33% - 13px);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            @media screen and (max-width: $media-large) {
+               width: calc(50% - 13px);
+               margin-right: 24px;
+            }
+
+            @media screen and (max-width: $media-extra-small) {
+               width: 253px !important;
+            }
+
+
+            .card-image {
+               font-size: 0px;
+               position: relative;
+
+               img {
+                  width: 100%;
+               }
+
+               p {
+                  position: absolute;
+                  top: 18px;
+                  left: 16px;
+                  font-family: 'Source Serif Pro';
+                  font-style: normal;
+                  font-weight: 700;
+                  font-size: 14px;
+                  line-height: 128%;
+                  color: #FFFFFF;
+                  padding: 5px 12px;
+                  background: #F03209;
+                  border-radius: 300px;
+
+                  @media screen and (max-width: $media-small) {
+                     top: 12px;
+                     left: 11px;
+                     padding: 6px 10px;
+                  }
+               }
+            }
+
+            .card-content {
+               padding-right: 20px;
+
+               .process {
+                  display: flex;
+                  align-items: center;
+                  gap: 15px;
+
+                  @media screen and (max-width: $media-small) {
+                     gap: 8px;
+                  }
+
+                  p {
+                     display: flex;
+                     gap: 6px;
+                     align-items: center;
+                     font-family: $font-family-public-sans;
+                     font-style: normal;
+                     font-weight: 400;
+                     font-size: 13px;
+                     line-height: 115%;
+                     color: #09090B;
+
+                     img {
+                        max-width: 17px;
+                     }
+                  }
+               }
+
+               h6 {
+                  padding: 12px 0px 14px;
+                  font-family: 'Source Serif Pro';
+                  font-style: normal;
+                  font-weight: 600;
+                  font-size: 24px;
+                  line-height: 108%;
+                  color: #09090B;
+
+                  @media screen and (max-width: $media-small) {
+                     padding: 13px 0px 17px;
+                     font-size: 20px;
+                     line-height: 125%;
+                  }
+               }
+
+               .chef-name {
+                  display: flex;
+                  gap: 10px;
+                  align-items: center;
+
+                  img {
+                     max-width: 30px;
+                  }
+
+                  p {
+                     font-family: $font-family-source-serif;
+                     font-style: normal;
+                     font-weight: 600;
+                     font-size: 16px;
+                     line-height: 125%;
+                     color: #09090B;
+                  }
+               }
+            }
+         }
+      }
+   }
+}

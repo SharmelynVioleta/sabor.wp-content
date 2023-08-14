@@ -1,0 +1,363 @@
+.card-section {
+   margin: 75px 0px 107px;
+
+   @media screen and (max-width: $media-small) {
+      margin: 35px 0px 47px;
+   }
+
+   &.col-3 {
+      .container {
+         padding-right: 0px;
+
+         .cards {
+            gap: 22px;
+
+            @media screen and (max-width: $media-small) {
+               margin-top: 24px;
+            }
+
+            .card {
+               width: calc(33% - 11px);
+               display: flex;
+               flex-direction: column;
+               position: relative;
+               gap: 21px;
+
+               @media screen and (max-width: $media-extra-large) {
+                  width: calc(50% - 13px);
+               }
+
+               @media screen and (max-width: $media-large) {
+                  margin-right: 24px;
+               }
+
+               @media screen and (max-width: $media-extra-small) {
+                  width: 253px !important;
+               }
+            }
+         }
+      }
+   }
+
+   &.col-4 {
+      .container {
+         padding-right: 0px;
+
+         .cards {
+            .card {
+               @media screen and (max-width: $media-large) {
+                  margin-right: 24px;
+               }
+
+               @media screen and (max-width: $media-extra-small) {
+                  width: 253px !important;
+               }
+            }
+         }
+      }
+   }
+
+   .container {
+      .sabor_pagination_link {
+         padding-top: 80px;
+
+         .nav-links {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 16px;
+
+            .page-numbers {
+               color: $color-black;
+               text-align: center;
+               font-size: 16px;
+               font-family: $font-family-source-serif;
+               font-style: normal;
+               font-weight: 700;
+               line-height: normal;
+               position: relative;
+
+               &.next,
+               &.prev {
+                  position: relative;
+                  width: 16px;
+                  height: 24px;
+
+                  &::after {
+                     content: unset;
+                  }
+
+                  &::before {
+                     content: '';
+                     position: absolute;
+                     top: 0px;
+                     left: 0px;
+                     width: 100%;
+                     height: 100%;
+                     background-image: url(./assets/images/arrow.svg);
+                     transition: all 0.5s ease-in-out;
+                     filter: invert(4%) sepia(7%) saturate(827%) hue-rotate(160deg) brightness(66%) contrast(90%);
+                  }
+
+                  &:hover {
+                     &::before {
+                        filter: invert(0);
+                     }
+                  }
+               }
+
+               &.next {
+                  transform: rotate(180deg);
+               }
+
+               &::after {
+                  content: '';
+                  position: absolute;
+                  bottom: 0%;
+                  left: -50%;
+                  width: 200%;
+                  height: 1px;
+                  background: transparent;
+                  transition: all 0.5s ease-in-out;
+               }
+
+               &:hover,
+               &.current {
+                  color: $color-red;
+
+                  &::after {
+                     background: $color-red;
+                  }
+               }
+            }
+         }
+      }
+
+      h4 {
+         color: $color-black;
+         text-align: justify;
+         font-size: 36px;
+         font-family: $font-family-source-serif;
+         font-weight: 600;
+         line-height: 40px;
+
+         @media screen and (max-width: $media-large) {
+            color: $color-black;
+            text-align: justify;
+            font-size: 24px;
+            font-family: $font-family-source-serif;
+            font-weight: 600;
+            line-height: 26px;
+         }
+      }
+
+      h2,
+      h5 {
+         font-family: $font-family-source-serif;
+         font-style: normal;
+         font-weight: 600;
+         font-size: 42px;
+         line-height: 110%;
+         color: $color-black;
+         padding-bottom: 26px;
+         position: relative;
+         border-bottom: 4px solid $color-black;
+
+         @media screen and (max-width:$media-small) {
+            &::before {
+               content: '';
+               position: absolute;
+               bottom: 0px;
+               left: 0px;
+               width: calc(100% - 15px);
+               border-bottom: 4px solid $color-black;
+            }
+         }
+
+         @media screen and (max-width: $media-small) {
+            font-size: 24px;
+            padding-bottom: 16px;
+            border-bottom: 0px;
+         }
+      }
+
+      .cards {
+         display: flex;
+         flex-wrap: wrap;
+         margin-top: 32px;
+         gap: 24px;
+         row-gap: 70px;
+
+         @media screen and (max-width: $media-large) {
+            row-gap: 42px;
+         }
+
+         .slick-list {
+            padding-left: 0px !important;
+         }
+
+         .card {
+            position: relative;
+            width: calc(25% - 18px);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-bottom: 30px;
+
+            @media screen and (max-width: $media-extra-large) {
+               width: calc(33% - 13px);
+            }
+
+            @media screen and (max-width: $media-large) {
+               width: calc(50% - 13px);
+               padding-bottom: 0px;
+               gap: 15px;
+            }
+
+            @media screen and (max-width: $media-extra-small) {
+               width: 100%;
+            }
+
+            .sticky-btn {
+               display: flex;
+               flex-wrap: wrap;
+               gap: 10px;
+               position: absolute;
+               top: 18px;
+               left: 16px;
+
+               @media screen and (max-width: $media-small) {
+                  top: 12px;
+                  left: 11px;
+               }
+
+               a {
+                  font-family: $font-family-source-serif;
+                  font-style: normal;
+                  font-weight: 700;
+                  font-size: 14px;
+                  line-height: 128%;
+                  color: $color-white;
+                  background: $color-red;
+                  border-radius: 300px;
+                  padding: 4px 11px;
+                  border: 1px solid $color-red;
+
+                  @media screen and (max-width: $media-small) {
+                     padding: 6px 10px;
+                  }
+
+                  &:hover {
+                     color: $color-red;
+                     background-color: $color-white;
+                  }
+
+               }
+            }
+
+            .card-image {
+               font-size: 0px;
+               line-height: 0px;
+
+            }
+
+            .card-content {
+               .process {
+                  display: flex;
+                  align-items: center;
+                  gap: 15px;
+                  padding-bottom: 12px;
+
+                  @media screen and (max-width: $media-small) {
+                     padding-bottom: 13px;
+                  }
+
+                  @media screen and (max-width: $media-small) {
+                     gap: 8px;
+                  }
+
+                  p {
+                     display: flex;
+                     gap: 6px;
+                     align-items: center;
+                     font-family: $font-family-public-sans;
+                     font-style: normal;
+                     font-weight: 400;
+                     font-size: 14px;
+                     line-height: 115%;
+                     color: $color-black;
+
+                     img {
+                        max-width: 17px;
+                     }
+                  }
+               }
+
+               .inner-content {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+                  gap: 12px;
+                  padding-bottom: 15px;
+
+                  @media screen and (max-width: $media-large) {
+                     gap: 12px;
+                  }
+
+                  .text-link {
+                     a {
+                        font-family: $font-family-source-serif;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 24px;
+                        line-height: 108%;
+                        color: $color-black;
+
+                        &:hover {
+                           color: $color-red;
+                        }
+
+                        @media screen and (max-width: $media-small) {
+                           font-size: 20px;
+                           line-height: 125%;
+                        }
+                     }
+                  }
+
+                  .chef-name {
+                     position: absolute;
+                     bottom: 0px;
+                     display: flex;
+                     gap: 10px;
+                     align-items: center;
+
+                     @media screen and (max-width: $media-large) {
+                        position: relative;
+                     }
+
+                     &:hover {
+                        p {
+                           color: $color-red;
+                        }
+                     }
+
+                     img {
+                        max-width: 30px;
+                     }
+
+                     p {
+                        transition: all 0.5s ease-in-out;
+                        font-family: $font-family-source-serif;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 125%;
+                        color: $color-black;
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}

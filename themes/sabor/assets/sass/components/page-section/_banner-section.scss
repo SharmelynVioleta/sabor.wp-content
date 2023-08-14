@@ -1,0 +1,187 @@
+.banner-section {
+   position: relative;
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+
+   &::before {
+      content: '';
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 50%), rgba(0, 0, 0, 0.2);
+   }
+
+   img {
+      width: 100%;
+   }
+
+   .banner-content {
+      max-width: 400px;
+      position: relative;
+      padding: 178px 0px 130px 0px;
+      margin-left: 70px;
+
+      @media screen and (max-width:$media-medium-desktop) {
+         padding: 120px 0px;
+      }
+
+      @media screen and (max-width:$media-small) {
+         max-width: 340px;
+         margin-left: 20px;
+         padding: 127px 0px 35px 0px;
+      }
+
+      .breadcrumb {
+         display: flex;
+         gap: 32px;
+
+         a {
+            font-family: $font-family-source-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 128%;
+            color: $color-white;
+            position: relative;
+
+            &:hover {
+               color: $color-red;
+            }
+
+            &:first-child {
+               font-weight: 700;
+            }
+
+            &:not(:last-child):after {
+               content: '';
+               position: absolute;
+               right: -18px;
+               top: 50%;
+               transform: translateY(-50%) rotate(-76-76.76deg);
+               height: 100%;
+               width: 1px;
+               background-color: $color-red;
+            }
+         }
+      }
+
+      h1 {
+         margin: 8px 0px 25px 0px;
+         font-family: $font-family-source-serif;
+         font-style: normal;
+         font-weight: 600;
+         font-size: 48px;
+         line-height: 100%;
+         display: flex;
+         align-items: center;
+         letter-spacing: 0.01em;
+         color: $color-white;
+
+         @media screen and (max-width:$media-small) {
+            margin: 11px 0px;
+            font-size: 36px;
+            line-height: 111%;
+         }
+      }
+
+      .process {
+         display: flex;
+         align-items: center;
+         gap: 15px;
+         margin-bottom: 25px;
+
+         @media screen and (max-width: $media-small) {
+            margin-bottom: 23px;
+            gap: 8px;
+         }
+
+         p {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            font-family: $font-family-public-sans;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 114%;
+            color: $color-white;
+
+            @media screen and (max-width: $media-small) {
+               font-size: 13px;
+               line-height: 115%;
+               color: $color-white;
+            }
+
+            img {
+               max-width: 17px;
+            }
+         }
+      }
+
+      .chef-name {
+         display: flex;
+         gap: 10px;
+         align-items: center;
+         margin-bottom: 28px;
+
+         @media screen and (max-width: $media-small) {
+            padding-bottom: 33px;
+         }
+
+         &:hover {
+            p {
+               color: $color-red;
+            }
+         }
+
+         img {
+            max-width: 30px;
+         }
+
+         p {
+            transition: all 0.5s ease-in-out;
+            font-family: $font-family-source-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: $color-white;
+         }
+      }
+
+      .bottom-text {
+         display: flex;
+         align-items: center;
+         gap: 18px;
+
+         span {
+            display: inline-block;
+            height: 1px;
+            width: 168px;
+            background-color: $color-red;
+
+            @media screen and (max-width: $media-small) {
+               width: 62px;
+            }
+         }
+
+         p {
+            font-family: $font-family-source-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: $color-white;
+
+            @media screen and (max-width: $media-small) {
+               font-weight: 600;
+               font-size: 16px;
+               line-height: 125%;
+            }
+         }
+      }
+   }
+}

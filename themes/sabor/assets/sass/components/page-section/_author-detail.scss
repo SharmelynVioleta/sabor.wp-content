@@ -1,0 +1,116 @@
+.author-detail {
+   text-align: center;
+   padding-top: 30px;
+
+   .author-image {
+      font-size: 0px;
+      line-height: 0px;
+      position: relative;
+
+      &::after,
+      &::before {
+         content: '';
+         position: absolute;
+         top: 50%;
+         left: 0%;
+         transform: translateY(-50%);
+         width: calc(50% - 75px);
+         height: 2px;
+         background-color: #E8E8E8;
+         z-index: -1;
+
+         @media screen and (max-width: 767px) {
+            width: calc(50% - 45px);
+         }
+      }
+
+      &::after {
+         left: unset;
+         right: 0%;
+      }
+
+      img {
+         max-width: 80px;
+         border-radius: 50%;
+
+         @media screen and (max-width: $media-small) {
+            max-width: 50px;
+         }
+      }
+   }
+
+   .author-section {
+      max-width: 740px;
+      margin: 0px auto;
+
+      .author-name {
+         padding: 25px 0px 21px;
+
+         @media screen and (max-width: $media-small) {
+            padding: 9px 0px 12px;
+         }
+
+         h1 {
+            color: $color-black;
+            font-size: 52px;
+            font-family: $font-family-source-serif;
+            font-weight: 600;
+            line-height: 104%;
+            letter-spacing: 0.52px;
+
+            @media screen and (max-width: $media-large) {
+               font-size: 24px;
+               font-weight: 700;
+            }
+         }
+      }
+
+      ul {
+         display: flex;
+         gap: 18px;
+         align-items: center;
+         justify-content: center;
+         padding-bottom: 21px;
+
+         @media screen and (max-width: $media-small) {
+            padding-bottom: 32px;
+            gap: 14px;
+         }
+
+         li {
+            a {
+               font-size: 0px;
+               line-height: 0px;
+
+               img {
+                  max-width: 24px;
+
+                  @media screen and (max-width: $media-small) {
+                     max-width: 18px;
+                  }
+               }
+            }
+         }
+      }
+
+      .author-description {
+         display: flex;
+         flex-direction: column;
+         gap: 10px;
+         text-align: center;
+
+         p {
+            color: $color-black;
+            font-size: 16px;
+            font-family: $font-family-public-sans;
+            line-height: 150%;
+
+            @media screen and (max-width: $media-small) {
+               background: $background-color-grey;
+               padding: 11px 38px;
+               font-size: 15px;
+            }
+         }
+      }
+   }
+}

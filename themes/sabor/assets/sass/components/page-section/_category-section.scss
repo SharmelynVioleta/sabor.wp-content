@@ -1,0 +1,131 @@
+.category-section {
+   margin: 0px 0px 82px;
+
+   @media screen and (max-width: $media-small) {
+      margin: 35px 0px 47px;
+   }
+
+   h5 {
+      font-family: $font-family-source-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 42px;
+      line-height: 110%;
+      color: $color-black;
+      padding-bottom: 25px;
+      position: relative;
+      border-bottom: 4px solid $color-black;
+
+      @media screen and (max-width: $media-small) {
+         font-size: 24px;
+         padding-bottom: 16px;
+      }
+   }
+
+   .cards {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 42px;
+      justify-content: space-between;
+      row-gap: 62px;
+
+      @media screen and (max-width: $media-large) {
+         row-gap: 40px;
+         flex-direction: column;
+      }
+
+      @media screen and (max-width: $media-small) {
+         margin-top: 24px;
+      }
+
+      @media screen and (max-width: $media-extra-small) {
+         row-gap: 24px;
+      }
+
+      .card {
+         position: relative;
+         width: calc(50% - 12px);
+         display: flex;
+         flex-direction: column;
+         gap: 14px;
+
+         .sticky-btn {
+            position: absolute;
+            top: 20px;
+            left: 25px;
+            font-family: $font-family-source-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 128%;
+            color: $color-white;
+            background: $color-red;
+            border-radius: 300px;
+            padding: 4px 11px;
+            border: 1px solid $color-red;
+
+            @media screen and (max-width: $media-small) {
+               top: 12px;
+               left: 11px;
+               padding: 6px 10px;
+            }
+         }
+
+         @media screen and (max-width: $media-large) {
+            width: 100%;
+         }
+
+         .card-image {
+            font-size: 0px;
+            line-height: 0px;
+
+            img {
+               width: 100%;
+            }
+         }
+
+         .card-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            p {
+               font-family: $font-family-source-serif;
+               font-style: normal;
+               font-weight: 600;
+               font-size: 24px;
+               line-height: 108%;
+               color: $color-black;
+
+               @media screen and (max-width: $media-small) {
+                  font-family: $font-family-source-serif;
+                  font-style: normal;
+                  font-weight: 600;
+                  font-size: 20px;
+                  line-height: 25px;
+               }
+            }
+
+            a {
+               font-family: $font-family-source-serif;
+               font-style: normal;
+               font-weight: 600;
+               font-size: 16px;
+               line-height: 20px;
+               color: $color-red;
+
+               &:hover {
+                  color: $color-black;
+               }
+
+               @media screen and (max-width: $media-small) {
+                  font-style: normal;
+                  font-weight: 600;
+                  font-size: 14px;
+                  line-height: 18px;
+               }
+            }
+         }
+      }
+   }
+}

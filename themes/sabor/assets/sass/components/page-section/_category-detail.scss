@@ -1,0 +1,39 @@
+.category-detail {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   gap: 18px;
+   max-width: 530px;
+   margin: 0px auto;
+
+   @media screen and (max-width: $media-small) {
+      gap: 8px;
+   }
+
+   h1 {
+      color: $color-black;
+      font-size: 52px;
+      font-family: $font-family-source-serif;
+      font-weight: 600;
+      line-height: 104%;
+      letter-spacing: 0.52px;
+
+      @media screen and (max-width: $media-large) {
+         font-size: 24px;
+         font-weight: 700;
+      }
+
+      p {
+         color: $color-black;
+         font-size: 15px;
+         font-family: $font-family-public-sans;
+         line-height: 150%;
+
+         @media screen and (max-width: $media-small) {
+            background: $background-color-grey;
+            padding: 11px 38px;
+            font-size: 13px;
+         }
+      }
+   }
+}

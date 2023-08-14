@@ -1,0 +1,119 @@
+body,
+.page {
+    margin: 0px;
+}
+
+* {
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+.page-title {
+    padding-top: 40px;
+    color: $color-black;
+    font-size: 52px;
+    font-family: $font-family-source-serif;
+    font-weight: 600;
+    line-height: 104%;
+    letter-spacing: 0.52px;
+
+    @media screen and (max-width: $media-large) {
+        font-size: 24px;
+        font-weight: 700;
+    }
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:focus,
+a:focus-visible,
+img:focus,
+img:focus-visible,
+button:focus,
+button:focus-visible {
+    outline: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-family: $font-family-public-sans;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    color: $color-black;
+    margin: 0px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @media screen and (max-width:$media-medium-desktop) {
+        max-width: 1150px;
+    }
+
+    @media screen and (max-width:$media-extra-large) {
+        max-width: 900px;
+    }
+
+    @media screen and (max-width:$media-large) {
+        max-width: 700px;
+        padding: 0px 15px;
+    }
+
+    @media screen and (max-width:$media-small) {
+        padding: 0px 15px;
+        max-width: 100%;
+    }
+}
+
+.card-image {
+    font-size: 0px;
+    position: relative;
+    overflow: hidden;
+
+    a {
+        font-size: 0px;
+        line-height: 0px;
+    }
+
+    &:hover {
+        img {
+            transform: scale(1.1);
+        }
+    }
+
+    img {
+        transform: scale(1);
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+.chef-name {
+    img {
+        border-radius: 50%;
+    }
+}
+
+.clearfix {
+    clear: both;
+    float: none;
+}

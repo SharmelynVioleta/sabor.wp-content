@@ -1,0 +1,81 @@
+.site-main.card-section {
+   .container {
+      .cards {
+         .card {
+            gap: 0px;
+            padding-bottom: 90px;
+
+            .card-footer,
+            .card-header {
+               display: flex;
+               flex-direction: column;
+               gap: 5px;
+               margin: 10px 0px;
+
+               span {
+                  display: flex;
+                  justify-content: space-between;
+                  font-family: $font-family-source-serif;
+                  font-style: normal;
+                  font-weight: 600;
+                  font-size: 16px;
+                  line-height: 125%;
+                  color: $color-black;
+
+                  a {
+                     color: $color-red;
+
+                     &:hover {
+                        color: $color-black;
+                     }
+                  }
+               }
+            }
+
+            .card-footer {
+               width: 100%;
+               position: absolute;
+               bottom: 0px;
+            }
+
+            .post-thumbnail {
+               font-size: 0px;
+               line-height: 0px;
+               height: 200px;
+               overflow: hidden;
+               margin: 10px 0px;
+
+               &:hover {
+                  img {
+                     transform: scale(1.1);
+                  }
+               }
+
+               img {
+                  height: 100%;
+                  object-fit: cover;
+                  transform: scale(1);
+                  transition: all 0.5s ease-in-out;
+               }
+            }
+
+            .card-content {
+               p {
+                  margin: 10px 0px;
+                  font-family: $font-family-source-serif;
+                  font-style: normal;
+                  font-weight: 600;
+                  font-size: 24px;
+                  line-height: 108%;
+                  color: $color-black;
+
+                  @media screen and (max-width: $media-small) {
+                     font-size: 20px;
+                     line-height: 125%;
+                  }
+               }
+            }
+         }
+      }
+   }
+}

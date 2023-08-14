@@ -1,0 +1,24 @@
+ul,
+ol {
+	margin: 0;
+	padding: 0;
+}
+
+ol,
+li,
+ul {
+	list-style: none;
+}
+
+li>ul,
+li>ol {
+	margin: 0px;
+}
+
+dt {
+	font-weight: 700;
+}
+
+dd {
+	margin: 0;
+}
